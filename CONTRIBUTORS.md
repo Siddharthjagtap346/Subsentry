@@ -133,3 +133,8 @@ This project exists because of your time, effort, and curiosity.
 - **Name:** Kamakshi Gupta  
 - **GitHub:** https://github.com/kamakshi-gupta  
 - **About:** IT Sophomore at IIIT Allahabad, exploring open source and learn along the way.
+
+
+- **Name:** Aarav Singh  
+  **GitHub:** https://github.com/aaravsingh-3  
+  **About:** i am from iiita and i am here to learn about open source contributions.
