@@ -165,3 +165,7 @@ This project exists because of your time, effort, and curiosity.
 - **Name:** Mohan
 - **GitHub:** https://github.com/aricthecoder
 - **About:** IT Sophomore at IIIT Allahabad
+
+- **Name:** Amogh S.
+- **GitHub:** https://github.com/MogaS811
+- **About:** Cricket is love and AI ML bhi bdiya lgta hai. [From IIITA]
