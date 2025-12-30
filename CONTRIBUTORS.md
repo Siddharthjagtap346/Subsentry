@@ -171,3 +171,7 @@ This project exists because of your time, effort, and curiosity.
 - **Name:** Amogh S.
 - **GitHub:** https://github.com/MogaS811
 - **About:** Cricket is love and AI ML bhi bdiya lgta hai. [From IIITA]
+
+- **Name:** Tejinerpal Singh
+- **GitHub:** https://github.com/Tejinder105
+- **About:** CSE sophomore at IIIT Vadoara
