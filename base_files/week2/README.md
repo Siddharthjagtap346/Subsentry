@@ -107,6 +107,7 @@ Subscription fields remain consistent across:
 | **4** | Constants & Enums | Krishna200608 (**#112**), amansharma264 (**#117**), AkshaTGA (**#124**) |
 | **5 / 6** | Subscription APIs | Aarav-Jain-official (**#125**), Krishna200608 (**#126**), dwivediprashant (**#128**), amansharma264 (**#131**) |
 | **7** | Dashboard UI | dwivediprashant (**#144**) |
+| **8** | Subscription Listing UI | TBD (Week 3) |
 | **Logo** | Branding Assets | dwivediprashant (**#108**), AkshaTGA (**#123**), suzzzal (**#133**), Apoorv012 (**#139**) |
 
 ---
