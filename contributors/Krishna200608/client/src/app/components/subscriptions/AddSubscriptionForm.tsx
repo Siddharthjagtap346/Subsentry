@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useAuth } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   CreditCard,
@@ -15,7 +16,7 @@ import {
   CheckCircle2,
   AlertCircle,
   ArrowLeft,
-  Sparkles,
+  Plus,
   Zap,
 } from 'lucide-react';
 import { createSubscription } from '@/lib/api';
@@ -255,8 +256,14 @@ export default function AddSubscriptionForm() {
           <span className="text-sm">Back</span>
         </button>
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <Sparkles className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 rounded-xl bg-[#0f0f0f] border border-[#2a2a2a] flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="SubSentry"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-white">Add Subscription</h1>
@@ -631,7 +638,7 @@ export default function AddSubscriptionForm() {
                     </>
                   ) : (
                     <>
-                      <Sparkles className="w-4 h-4 mr-2" />
+                      <Plus className="w-4 h-4 mr-2" />
                       Add Subscription
                     </>
                   )}
