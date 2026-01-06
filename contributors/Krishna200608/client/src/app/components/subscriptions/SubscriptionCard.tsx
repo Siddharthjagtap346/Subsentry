@@ -12,6 +12,7 @@ import {
   getBillingCycleLabel,
   getSourceIcon,
 } from '@/lib/utils';
+import { getServiceIcon, getServiceColors } from '@/lib/service-icons';
 import { 
   Calendar, 
   AlertTriangle,
@@ -48,6 +49,10 @@ export default function SubscriptionCard({ subscription, view = 'grid', index = 
   const isUrgent = isUrgentRenewal(subscription.renewalDate);
   const categoryColors = getCategoryColor(subscription.category);
   const statusColors = getStatusColor(subscription.status);
+  
+  // Get service-specific icon and colors
+  const serviceIcon = getServiceIcon(subscription.name);
+  const serviceColors = getServiceColors(subscription.name);
 
   const initials = subscription.name
     .split(' ')
@@ -55,6 +60,10 @@ export default function SubscriptionCard({ subscription, view = 'grid', index = 
     .slice(0, 2)
     .join('')
     .toUpperCase();
+
+  // Use service colors if available, otherwise fall back to category colors
+  const iconBg = serviceColors?.bg || categoryColors.bg;
+  const iconText = serviceColors?.text || categoryColors.text;
 
   const getRenewalText = () => {
     if (daysUntil < 0) return 'Overdue';
@@ -82,11 +91,11 @@ export default function SubscriptionCard({ subscription, view = 'grid', index = 
             transition={{ duration: 0.4 }}
             className={cn(
               'w-12 h-12 rounded-xl flex items-center justify-center text-sm font-bold shrink-0',
-              categoryColors.bg,
-              categoryColors.text
+              iconBg,
+              iconText
             )}
           >
-            {initials}
+            {serviceIcon || initials}
           </motion.div>
 
           {/* Main Info */}
@@ -209,11 +218,11 @@ export default function SubscriptionCard({ subscription, view = 'grid', index = 
             transition={{ duration: 0.4 }}
             className={cn(
               'w-12 h-12 rounded-xl flex items-center justify-center text-sm font-bold shadow-lg',
-              categoryColors.bg,
-              categoryColors.text
+              iconBg,
+              iconText
             )}
           >
-            {initials}
+            {serviceIcon || initials}
           </motion.div>
 
           <div className="flex items-center gap-2">

@@ -51,7 +51,7 @@ export default function Header({ title, subtitle, onMobileMenuClick }: HeaderPro
             className="bg-transparent text-sm text-white placeholder-gray-500 outline-none w-48"
           />
           <kbd className="hidden xl:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs text-gray-500 bg-[#2a2a2a] rounded">
-            ⌘K
+            Ctrl + K
           </kbd>
         </div>
 

@@ -1,4 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
+import { Pencil, Mail, Download, ClipboardList } from 'lucide-react';
+import React from 'react';
 
 export function cn(...inputs: ClassValue[]) {
   return clsx(inputs);
@@ -65,11 +67,12 @@ export function getBillingCycleLabel(cycle: string): string {
   return labels[cycle] || cycle;
 }
 
-export function getSourceIcon(source: string): string {
-  const icons: Record<string, string> = {
-    manual: '✏️',
-    gmail: '📧',
-    imported: '📥',
+export function getSourceIcon(source: string): React.ReactNode {
+  const iconClass = 'w-3.5 h-3.5 text-gray-500';
+  const icons: Record<string, React.ReactNode> = {
+    manual: React.createElement(Pencil, { className: iconClass }),
+    gmail: React.createElement(Mail, { className: iconClass }),
+    imported: React.createElement(Download, { className: iconClass }),
   };
-  return icons[source] || '📋';
+  return icons[source] || React.createElement(ClipboardList, { className: iconClass });
 }

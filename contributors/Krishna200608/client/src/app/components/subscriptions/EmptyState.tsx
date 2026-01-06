@@ -1,6 +1,6 @@
 'use client';
 
-import { CreditCard, Plus, Sparkles } from 'lucide-react';
+import { CreditCard, Plus, Sparkles, BarChart3, Bell, Mail } from 'lucide-react';
 
 interface EmptyStateProps {
   onAddClick?: () => void;
@@ -43,19 +43,19 @@ export default function EmptyState({ onAddClick }: EmptyStateProps) {
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
         <div className="text-center">
           <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-            <span className="text-emerald-400">📊</span>
+            <BarChart3 className="w-5 h-5 text-emerald-400" />
           </div>
           <p className="text-sm text-gray-400">Track spending across all subscriptions</p>
         </div>
         <div className="text-center">
           <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-amber-500/20 flex items-center justify-center">
-            <span className="text-amber-400">🔔</span>
+            <Bell className="w-5 h-5 text-amber-400" />
           </div>
           <p className="text-sm text-gray-400">Get notified before renewals</p>
         </div>
         <div className="text-center">
           <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-purple-500/20 flex items-center justify-center">
-            <span className="text-purple-400">📧</span>
+            <Mail className="w-5 h-5 text-purple-400" />
           </div>
           <p className="text-sm text-gray-400">Import from Gmail automatically</p>
         </div>
