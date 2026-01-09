@@ -16,6 +16,8 @@ export const subscriptionReference = {
     DebitCard: "Debit Card", 
     CreditCard: "Credit Card",   
     Other: "Other",
+    PayPal: "PayPal",
+    Bank: "Bank",
 };
 
 export const subscriptionStatus = {
