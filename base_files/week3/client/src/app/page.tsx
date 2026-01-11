@@ -49,7 +49,9 @@ export default function Home() {
             autoPlay
             muted
             playsInline
+            preload="auto"
             onEnded={finishIntro}
+            onError={finishIntro}
           />
           <button
             type="button"
