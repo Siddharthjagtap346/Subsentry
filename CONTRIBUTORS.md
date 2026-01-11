@@ -94,6 +94,9 @@ Copy-paste this row at the **end of the table** and fill your details:
   **GitHub:** https://github.com/IshanChad  
   **About:** Computer science student interested in backend development and open-source contributions.
 
+- **Name:** Siddharth Jagtap  
+  **GitHub:** https://github.com/Siddharthjagtap346  
+  **About:** Computer science student exploring backend development and open-source contributions.
 
 
 ---
