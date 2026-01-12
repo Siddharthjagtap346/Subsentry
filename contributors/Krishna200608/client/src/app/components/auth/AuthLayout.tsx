@@ -12,7 +12,7 @@ export default function AuthLayout({ children, mode }: AuthLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-black">
       {/* Left Panel - Auth Form */}
-      <div className="flex-1 flex flex-col justify-center px-6 py-12 lg:px-16 xl:px-24 relative z-10">
+      <div className="flex-1 flex flex-col justify-center px-6 py-12 lg:px-16 xl:px-24 relative z-10 bg-gradient-to-br from-gray-900/50 via-black to-gray-900/30">
         {/* Logo & Branding */}
         <div className="mb-10">
           <Link href="/" className="inline-flex items-center gap-3 group">

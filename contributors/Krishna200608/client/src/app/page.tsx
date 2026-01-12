@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { SignInButton, SignUpButton, useUser } from '@clerk/nextjs';
+import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 
 const INTRO_STORAGE_KEY = 'subsentry_intro_seen';
@@ -139,17 +139,17 @@ export default function Home() {
             </Link>
 
             <div className="flex items-center gap-4">
-              <SignInButton>
+              <Link href="/sign-in">
                 <button className="px-5 py-2.5 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
                   Sign In
                 </button>
-              </SignInButton>
-              <SignUpButton>
+              </Link>
+              <Link href="/sign-up">
                 <button className="relative px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full overflow-hidden group shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300">
                   <span className="relative z-10">Get Started Free</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </button>
-              </SignUpButton>
+              </Link>
             </div>
           </nav>
 
@@ -177,8 +177,9 @@ export default function Home() {
             </p>
 
             {/* CTA Buttons */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <SignUpButton>
+              <Link href="/sign-up">
                 <button className="group relative px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full overflow-hidden shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-100">
                   <span className="relative z-10 flex items-center gap-2">
                     Start for Free
@@ -190,8 +191,8 @@ export default function Home() {
                   {/* Shimmer effect */}
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </button>
-              </SignUpButton>
-              <SignInButton>
+              </Link>
+              <Link href="/sign-in">
                 <button className="group px-8 py-4 text-base font-semibold text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm hover:scale-105 active:scale-100">
                   <span className="flex items-center gap-2">
                     Sign In
@@ -200,7 +201,7 @@ export default function Home() {
                     </svg>
                   </span>
                 </button>
-              </SignInButton>
+              </Link>
             </div>
 
             {/* Micro-copy */}

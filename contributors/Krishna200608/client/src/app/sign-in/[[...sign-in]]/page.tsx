@@ -6,35 +6,55 @@ import AuthLayout from '../../components/auth/AuthLayout';
 export default function Page() {
   return (
     <AuthLayout mode="sign-in">
-      <SignIn
-        appearance={{
-          elements: {
-            rootBox: 'w-full',
-            card: 'bg-transparent shadow-none p-0',
-            headerTitle: 'hidden',
-            headerSubtitle: 'hidden',
-            socialButtonsBlockButton:
-              'bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300',
-            socialButtonsBlockButtonText: 'text-white font-medium',
-            dividerLine: 'bg-gray-700',
-            dividerText: 'text-gray-500',
-            formFieldLabel: 'text-gray-300',
-            formFieldInput:
-              'bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500 focus:ring-blue-500/20',
-            formButtonPrimary:
-              'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40',
-            footerActionLink: 'text-blue-400 hover:text-blue-300',
-            identityPreviewEditButton: 'text-blue-400 hover:text-blue-300',
-            formFieldAction: 'text-blue-400 hover:text-blue-300',
-            alertText: 'text-red-400',
-            formFieldInputShowPasswordButton: 'text-gray-400 hover:text-white',
-          },
-          layout: {
-            socialButtonsPlacement: 'top',
-            socialButtonsVariant: 'blockButton',
-          },
-        }}
-      />
+      <div className="w-full max-w-md mx-auto">
+        <SignIn
+          appearance={{
+            elements: {
+              rootBox: 'w-full',
+              // Bright card so Clerk's bright footer matches the card
+              card:
+                'bg-white border border-gray-200 rounded-2xl p-6 shadow-xl',
+              // Hide Clerk headers (we use the layout's title)
+              headerTitle: 'hidden',
+              headerSubtitle: 'hidden',
+
+              // Social button: subtle light style with icon visible
+              socialButtonsBlockButton:
+                'w-full flex items-center justify-center gap-3 px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 transition',
+              socialButtonsBlockButtonText: 'text-gray-800 font-medium',
+
+              dividerLine: 'bg-gray-200',
+              dividerText: 'text-gray-400',
+              formFieldLabel: 'text-gray-700 font-medium',
+
+              // Inputs: light background and darker text for readable contrast
+              formFieldInput:
+                'w-full bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300 transition',
+
+              // Primary button: retains vivid gradient so CTA pops on white card
+              formButtonPrimary:
+                'w-full text-white py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition shadow',
+
+              // Footer / secondary action styling (matches Clerk's default light footer)
+              footerActionLink: 'text-blue-600 hover:text-blue-500',
+              formFieldAction: 'text-blue-600 hover:text-blue-500',
+              identityPreviewEditButton: 'text-blue-600 hover:text-blue-500',
+
+              // Error / success text
+              alertText: 'text-red-600',
+              formFieldErrorText: 'text-red-600 text-sm',
+              formFieldSuccessText: 'text-green-600 text-sm',
+
+              // Password show/hide
+              formFieldInputShowPasswordButton: 'text-gray-500 hover:text-gray-700',
+            },
+            layout: {
+              socialButtonsPlacement: 'top',
+              socialButtonsVariant: 'blockButton',
+            },
+          }}
+        />
+      </div>
     </AuthLayout>
   );
 }

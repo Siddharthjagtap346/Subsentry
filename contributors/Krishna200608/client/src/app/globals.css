@@ -116,47 +116,15 @@ body {
 }
 
 .auth-container .cl-card {
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(229, 231, 235, 1);
+  border-radius: 1rem;
 }
 
-.auth-container .cl-headerTitle,
-.auth-container .cl-headerSubtitle {
-  display: none;
-}
-
-.auth-container .cl-socialButtonsBlockButton {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.auth-container .cl-socialButtonsBlockButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.auth-container .cl-formFieldInput {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.auth-container .cl-formFieldInput:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-}
-
-.auth-container .cl-formButtonPrimary {
-  background: linear-gradient(to right, #2563eb, #7c3aed);
-  transition: all 0.3s ease;
-}
-
-.auth-container .cl-formButtonPrimary:hover {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+/* Override any conflicting Clerk default styles */
+.auth-container .cl-internal-b3fm6y {
+  background: white !important;
 }
 
 /* Custom scrollbar */
