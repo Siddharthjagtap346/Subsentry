@@ -83,6 +83,82 @@ body {
   animation: gradientShift 3s ease infinite;
 }
 
+/* Float animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Delay utilities for staggered animations */
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-2000 {
+  animation-delay: 2000ms;
+}
+
+/* Auth layout container styling for Clerk components */
+.auth-container .cl-rootBox {
+  width: 100%;
+}
+
+.auth-container .cl-card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.auth-container .cl-headerTitle,
+.auth-container .cl-headerSubtitle {
+  display: none;
+}
+
+.auth-container .cl-socialButtonsBlockButton {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.auth-container .cl-socialButtonsBlockButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-container .cl-formFieldInput {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.auth-container .cl-formFieldInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.auth-container .cl-formButtonPrimary {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  transition: all 0.3s ease;
+}
+
+.auth-container .cl-formButtonPrimary:hover {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -101,3 +177,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
+
