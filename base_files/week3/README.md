@@ -26,6 +26,9 @@ Week 3 is about turning the dashboard into a usable product interface. Compared 
 - Delete subscriptions with a confirmation dialog.
 - Uses PUT/DELETE on `/api/subscriptions/:id`.
 
+⭐ Maintainer Feature Boost
+- Intro splash video on the home page (first visit only) with a skip button for a polished onboarding feel.
+
 ## 📌 Structure
 
 - `client/` — Next.js UI based on Week 2, now ready for listing and form integration.
