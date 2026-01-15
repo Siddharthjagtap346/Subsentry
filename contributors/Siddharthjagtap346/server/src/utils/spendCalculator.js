@@ -2,7 +2,6 @@ import { BILLING_CYCLES } from '../constants/subscription.constants.js';
 
 /**
  * Normalize a subscription amount to YEARLY value
- * This is the single source of truth for spend math
  */
 const toYearlyAmount = (subscription) => {
   const { amount, billingCycle, status } = subscription;
