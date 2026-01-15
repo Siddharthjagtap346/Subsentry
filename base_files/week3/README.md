@@ -26,6 +26,9 @@ Week 3 is about turning the dashboard into a usable product interface. Compared 
 - Delete subscriptions with a confirmation dialog.
 - Uses PUT/DELETE on `/api/subscriptions/:id`.
 
+⭐ Maintainer Feature Boost
+- Intro splash video on the home page (first visit only) with a skip button for a polished onboarding feel.
+
 ## 📌 Structure
 
 - `client/` — Next.js UI based on Week 2, now ready for listing and form integration.
@@ -65,8 +68,8 @@ If you are implementing Week 3 issues, use this folder as the reference snapshot
 
 | ✅ Issue | Focus Area | Contributors (PRs) |
 |---:|---|---|
-| **8** | Subscription Listing UI + Navbar | Krishna200608 (**#165**) |
-| **9** | Add Subscription Form UI | Krishna200608 (**#166**) |
+| **8** | Subscription Listing UI + Navbar | Krishna200608 (**#165**) , dwivediprashant|
+| **9** | Add Subscription Form UI | Krishna200608 (**#166**) ,dwivediprashant|
 | **10** | Edit & Delete Subscriptions | ishanrajsingh (**#181**) |
 
 ### 📝 Other Submissions (Pending/Not Merged)
