@@ -46,6 +46,14 @@ export const getUserSubscriptions = async (req, res) => {
       .sort({ renewalDate: 1 })
       .select('-__v');
     const monthlySpend = calculateMonthlySpend(subscriptions);
+
+    return res.status(200).json({
+      data: subscriptions,
+      meta: {
+        monthlySpend,
+      },
+    });
+
     const yearlySpend = calculateYearlySpend(subscriptions);
 
     return res.status(200).json({
