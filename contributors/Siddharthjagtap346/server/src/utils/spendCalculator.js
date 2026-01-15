@@ -1,10 +1,13 @@
 import { BILLING_CYCLES } from '../constants/subscription.constants.js';
 
 /**
- * Convert a subscription amount into YEARLY value
+ * Normalize a subscription amount to YEARLY value
+ * This is the single source of truth for spend math
  */
-export const getYearlyAmount = (subscription) => {
-  const { amount, billingCycle } = subscription;
+const toYearlyAmount = (subscription) => {
+  const { amount, billingCycle, status } = subscription;
+
+  if (status !== 'active' || !amount || isNaN(amount)) return 0;
 
   switch (billingCycle) {
     case BILLING_CYCLES.MONTHLY:
@@ -26,35 +29,18 @@ export const getYearlyAmount = (subscription) => {
  */
 export const calculateYearlySpend = (subscriptions = []) => {
   return subscriptions.reduce(
-    (total, sub) => total + getYearlyAmount(sub),
+    (total, sub) => total + toYearlyAmount(sub),
     0
   );
 };
 
 /**
- * Calculate total monthly spend (needed for meta)
+ * Calculate total monthly spend
+ * Reuses yearly normalization (NO duplicate math)
  */
-export const getMonthlyAmount = (subscription) => {
-  const { amount, billingCycle } = subscription;
-
-  switch (billingCycle) {
-    case BILLING_CYCLES.MONTHLY:
-      return amount;
-
-    case BILLING_CYCLES.YEARLY:
-      return amount / 12;
-
-    case BILLING_CYCLES.WEEKLY:
-      return (amount * 52) / 12;
-
-    default:
-      return 0;
-  }
-};
-
 export const calculateMonthlySpend = (subscriptions = []) => {
   return subscriptions.reduce(
-    (total, sub) => total + getMonthlyAmount(sub),
+    (total, sub) => total + toYearlyAmount(sub) / 12,
     0
   );
 };
