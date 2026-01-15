@@ -24,9 +24,6 @@ const toYearlyAmount = (subscription) => {
   }
 };
 
-/**
- * Calculate total yearly spend
- */
 export const calculateYearlySpend = (subscriptions = []) => {
   return subscriptions.reduce(
     (total, sub) => total + toYearlyAmount(sub),

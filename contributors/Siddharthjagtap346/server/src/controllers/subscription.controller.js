@@ -104,7 +104,6 @@ export const updateSubscription = async (req, res) => {
     });
 
     const updatedSubscription = await subscription.save();
-
     return res.status(200).json({
       message: 'Subscription updated successfully',
       subscription: updatedSubscription,
